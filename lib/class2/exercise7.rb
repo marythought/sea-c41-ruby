@@ -11,21 +11,28 @@
 # TIP #1: The width of each line is 50 characters.
 #
 # TIP #2: You'll need the following methods:
-#
 #   string.center(Integer)  #=> String
-#
 #     Returns a new String of length Integer with `string` centered.
-#
 #     'bird'.center(10)  #=> '   bird   '
-#
 #   string.ljust(Integer)  #=> String
-#
 #     Returns a new String of length Integer with `string` left justified.
-#
 #     'bird'.ljust(10)  #=> 'bird      '
-#
 #   string.rjust(Integer)  #=> String
-#
 #     Returns a new String of length Integer with `string` right justified.
-#
 #     'bird'.rjust(10)  #=> '      bird'
+
+line_width = 50
+puts('Table of Contents'.center(line_width))
+puts('Chapter 1:  Getting Started'.ljust(line_width / 2) +
+     'page  1'.rjust(line_width / 2))
+puts('Chapter 2:  Numbers'.ljust(line_width / 2) +
+     'page  9'.rjust(line_width / 2))
+puts('Chapter 3:  Letters'.ljust(line_width / 2) +
+     'page 13'.rjust(line_width / 2))
+
+line_width = 40
+str = '--> text <--'
+puts(str.ljust(line_width))
+puts(str.center(line_width))
+puts(str.rjust(line_width))
+puts(str.ljust(line_width / 2) + str.rjust(line_width / 2))
