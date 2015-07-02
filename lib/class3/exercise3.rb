@@ -33,32 +33,22 @@
 #   BYE
 #   Nana: BYE SWEETIE!
 
-bye = false
+byecount = 0
 puts 'Nana: HI SWEETIE! GIVE NANA A KISS!'
-while bye == false
+while byecount < 3
   response = gets.chomp
   if response == 'BYE'
-    bye = true
+    byecount += 1
+    break if byecount == 3
     puts 'Nana: HOW\'S SCHOOL GOING?'
-    response = gets.chomp
-    if response == 'BYE'
-      puts 'Nana: HOW\'S SCHOOL GOING?'
-      response = gets.chomp
-      if response == 'BYE'
-        puts 'Nana: BYE SWEETIE!'
-        break
-      else
-        bye = false
-      end
-    else
-      bye = false
-    end
-  else
-    bye = false
   end
   if response == response.upcase
-    puts 'Nana: NOT SINCE ' + rand(1930..1951).to_s + '!'
+    puts 'Nana: NOT SINCE ' + rand(1930..1951).to_s +
+         '!' unless response == 'BYE'
+    byecount = 0 unless response == 'BYE'
   else
     puts 'Nana: HUH?! SPEAK UP, SWEETIE!'
+    byecount = 0
   end
 end
+puts 'Nana: BYE SWEETIE!'
