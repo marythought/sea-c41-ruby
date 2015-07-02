@@ -8,7 +8,6 @@
 #   Nana: HI SWEETIE! GIVE NANA A KISS!
 #   BYE
 #   Nana: BYE SWEETIE!
-#
 # If you type something that's not in all uppercase, like 'bye', then Nana
 # replies like this:
 #
@@ -55,3 +54,15 @@
 #
 # TIP #3: Let the `rand` method return a number in a range starting at zero.
 # What can you do to the number `rand` returns to make it at least 1930?
+
+puts 'Nana: HI SWEETIE! GIVE NANA A KISS!'
+response = gets.chomp
+while response != 'BYE'
+  if response == response.upcase
+    puts 'Nana: NOT SINCE ' + rand(1930..1951).to_s + '!'
+  else
+    puts 'Nana: HUH?! SPEAK UP, SWEETIE!'
+  end
+  response = gets.chomp
+end
+puts 'Nana: BYE SWEETIE!'

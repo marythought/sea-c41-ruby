@@ -8,3 +8,22 @@
 # divisible by 400 (e.g. 2000).
 #
 # TIP: I expect you to use a loop and a few modulo operations.
+
+years = 1900..2001
+leap_years = []
+
+years.each do |year|
+  next if year % 4 != 0
+  if year % 100 == 0
+    # test it
+    if year % 400 == 0
+      # add it
+      leap_years.push(year)
+    end
+  else
+    # add it
+    leap_years.push(year)
+  end
+end
+
+puts leap_years
