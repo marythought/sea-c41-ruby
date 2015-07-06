@@ -28,8 +28,49 @@
 
 # rubocop:disable MethodLength
 def old_school_roman_numeral(num)
-  num # change me
+  letters = { 1000 => 'M', 500 => 'D', 100 => 'C', 50 => 'L', 10 => 'X',
+              5 => 'V', 1 => 'I' }
+  if letters.key?(num)
+    return letters[num]
+  else
+    letters.keys.reduce('') do |result, key|
+      while num / key > 0 && num > 0
+        result += letters[key]
+        num -= key
+      end
+      result
+    end
+  end
 end
+
+# figuring out the loop with 23 as example:
+# num < letters.keys[0]? y
+# num < letters.keys[1]? y
+# num < letters.keys[2]?
+# num < letters.keys[3]? NO...
+#   numeral = letters.values[2] ("X")
+#   num -= letters.keys[2]
+#   num == 13
+#   # DO THE LOOP ABOVE AGAIN
+#     num < letters.keys[0]? y
+#     num < letters.keys[1]? y
+#     num < letters.keys[2]? y
+#     num < letters.keys[3] NO....
+#       numeral += letters.values[2] ("X")
+#       num -= letters.keys[2]
+#       num == 3
+#       #DO THE LOOP AGAIN
+#         num < letters.keys[0]? y
+#         num < letters.keys[1]? NO
+#           numeral += letters.keys[0]
+#           num -= letters.keys[0]
+#           num == 2
+#             num < letters.keys[0]? y
+#             num < letters.keys[1]? NO
+#               numeral += letters.keys[0]
+#               num -= letters.keys[0]
+#               num == 1
+# NUM IS EQUAL TO 1, SO LOOP ENDS, add "I" before ending?
 
 input = ARGV[0].to_i
 

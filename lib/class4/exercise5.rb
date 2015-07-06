@@ -33,7 +33,20 @@
 
 # rubocop:disable MethodLength
 def modern_roman_numeral(num)
-  num # change me
+  letters = { 1000 => 'M', 900 => 'CM', 500 => 'D', 400 => 'CD', 100 => 'C',
+              90 => 'XC', 50 => 'L', 40 => 'XL', 10 => 'X', 9 => 'IX',
+              5 => 'V', 4 => 'IV', 1 => 'I' }
+  if letters.key?(num)
+    return letters[num]
+  else
+    letters.keys.reduce('') do |result, key|
+      while num / key > 0 && num > 0
+        result += letters[key]
+        num -= key
+      end
+      result
+    end
+  end
 end
 
 input = ARGV[0].to_i

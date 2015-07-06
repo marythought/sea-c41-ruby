@@ -17,3 +17,24 @@
 # TIP #2: Use the `string.ljust` method from class 2 exercise 7.
 #
 # TIP #3: The width of each line is 50 characters.
+
+songs = [
+  ['Can I Kick It?', 'A Tribe Called Quest', '1991'],
+  ['Rump Shaker', 'Wreckx-n-Effect', '1992'],
+  ['Check Yo Self', 'Ice Cube', '1993'],
+  ['Regulate', 'Warren G & Nate Dogg', '1994'],
+  ['I Got 5 On It', 'Luniz', '1995'],
+  ['Ready Or Not', 'The Fugees', '1996']
+]
+
+songs.length.times do |i|
+  puts songs[i][0].ljust(20) + songs[i][1].ljust(26) + songs[i][2].ljust(4)
+end
+
+# puts('Table of Contents'.center(line_width))
+# puts('Chapter 1:  Getting Started'.ljust(line_width / 2) +
+#      'page  1'.rjust((line_width / 2) - 2))
+# puts('Chapter 2:  Numbers'.ljust(line_width / 2) +
+#      'page  9'.rjust(line_width / 2))
+# puts('Chapter 3:  Letters'.ljust(line_width / 2) +
+#      'page 13'.rjust(line_width / 2))
