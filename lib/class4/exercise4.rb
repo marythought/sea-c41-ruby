@@ -27,14 +27,15 @@
 # TIP #3: You only need to change the `old_school_roman_numeral` method.
 
 # rubocop:disable MethodLength
-
 # rubocop:disable EachWithObject
+
 def old_school_roman_numeral(num)
   letters = { 1000 => 'M', 500 => 'D', 100 => 'C', 50 => 'L', 10 => 'X',
               5 => 'V', 1 => 'I' }
   if letters.key?(num)
     return letters[num]
   else
+    letters.sort_by { |k, _v| k }.reverse!
     letters.keys.reduce('') do |result, key|
       while num / key > 0 && num > 0
         result += letters[key]
