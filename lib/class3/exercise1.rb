@@ -38,3 +38,12 @@ end
 # 10.times do |i|
 #   puts i
 # end
+
+# 3.downto(0).each do |n|
+#     s1 = "#{n} bottles of beet on the wall, #{n} bottles of beer!"
+#     # Modify for special cases
+#     s1.gsub!(/bottles/), 'bottle') if n == 1
+#     # First, "No more"
+#     s1.sub!(/0/, 'No more')
+#     s1.sub!(/0/, 'no more')
+#

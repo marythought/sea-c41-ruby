@@ -21,3 +21,11 @@ middle = gets.chomp
 puts "What's your last name?"
 last = gets.chomp
 puts "Nice to meet you, #{first} #{middle} #{last}."
+
+# name = ['first', 'middle', 'last'].map do |e|
+
+# name = %w(first middle last).map do |e|
+#     puts "What's your #{e} name?"
+#     gets.chomp
+# end
+# puts "Nice to meet you, #{name.join(' ')}."
