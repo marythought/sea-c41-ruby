@@ -27,6 +27,8 @@
 # TIP #3: You only need to change the `old_school_roman_numeral` method.
 
 # rubocop:disable MethodLength
+
+# rubocop:disable EachWithObject
 def old_school_roman_numeral(num)
   letters = { 1000 => 'M', 500 => 'D', 100 => 'C', 50 => 'L', 10 => 'X',
               5 => 'V', 1 => 'I' }

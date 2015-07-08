@@ -32,6 +32,7 @@
 # TIP #3: You only need to change the `modern_roman_numeral` method.
 
 # rubocop:disable MethodLength
+# rubocop:disable EachWithObject
 def modern_roman_numeral(num)
   letters = { 1000 => 'M', 900 => 'CM', 500 => 'D', 400 => 'CD', 100 => 'C',
               90 => 'XC', 50 => 'L', 40 => 'XL', 10 => 'X', 9 => 'IX',
