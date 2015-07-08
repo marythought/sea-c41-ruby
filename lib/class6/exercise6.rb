@@ -38,7 +38,6 @@ end
 # end
 
 def update(key, value)
-# load = {:name=>"George Harrison", :age=>58, :song=>"Something", :url=>"https://www.youtube.com/watch?v=UKAp-jRUp2o"}
   person = load.merge(key.to_sym => value)
   File.open database, 'w' do |f|
     f.write person.to_yaml

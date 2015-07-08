@@ -23,15 +23,25 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  File.expand_path('../database.yml', __FILE__)
 end
 
 def load
-  { replace: 'me' }
+  read_string = File.read database
+  YAML.load read_string
 end
 
 def remove(key)
-  key # fix me
+  person = load
+  removal = load.delete(key.to_sym)
+  if person[key.to_sym]
+    person.delete(key.to_sym)
+    File.open database, 'w' do |f|
+      f.write person.to_yaml
+    end
+  end
+  # rubocop thinks this is redundant, but I need it for the code to pass
+  return removal
 end
 
 input = ARGV[0]
