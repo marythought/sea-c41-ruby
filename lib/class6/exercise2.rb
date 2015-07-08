@@ -18,7 +18,7 @@
 # TIP: See your solution for Class 5 Exercise 2.
 
 def database
-  '/change/me'
+  File.expand_path('../database.yml', __FILE__)
 end
 
 puts database
