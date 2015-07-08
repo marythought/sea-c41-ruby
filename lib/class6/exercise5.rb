@@ -31,6 +31,7 @@ def load
 end
 
 def find(key)
+# puts load
   load[key.to_sym]
 end
 

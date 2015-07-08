@@ -30,8 +30,19 @@ def load
   YAML.load read_string
 end
 
+# REMEMBER THIS? UPDATE PERSON HASH, THEN USE SAME CODE TO SAVE.
+# def save
+#   File.open database, 'w' do |f|
+#     f.write person.to_yaml
+#   end
+# end
+
 def update(key, value)
-  key + value # fix me
+# load = {:name=>"George Harrison", :age=>58, :song=>"Something", :url=>"https://www.youtube.com/watch?v=UKAp-jRUp2o"}
+  person = load.merge(key.to_sym => value)
+  File.open database, 'w' do |f|
+    f.write person.to_yaml
+  end
 end
 
 input1, input2 = ARGV
