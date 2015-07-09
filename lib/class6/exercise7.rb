@@ -31,6 +31,7 @@ def load
   YAML.load read_string
 end
 
+# rubocop:disable RedundantReturn
 def remove(key)
   person = load
   removal = load.delete(key.to_sym)

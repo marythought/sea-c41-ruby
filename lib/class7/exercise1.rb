@@ -5,34 +5,24 @@
 # The following five methods must be fixed:
 #
 #   Integer#hours_in_seconds #=> Integer
-#
 #     Returns the number of hours converted to seconds.
-#
 #     10.hours_in_seconds  #=> 36_000
 #
 #   String#indent(amount = 2) #=> String
-#
 #     Returns `amount` spaces plus the String. The default `amount` is 2.
-#
 #     'foo'.indent     #=> '  foo'
 #     'foo'.indent(3)  #=> '   foo'
 #
 #   Integer#to_roman => String
-#
 #     Returns the roman numeral equavilent of the arabic number.
-#
 #     1999.to_roman  #=> 'MCMXCIX'
 #
 #   Array#second #=> Object
-#
 #     Returns the second element of the Array.
-#
 #     [10, 20, 30].second  #=> 20
 #
 #   Array#third #=> Object
-#
 #     Returns the third element of the Array.
-#
 #     [10, 20, 30].third  #=> 30
 #
 # HINT: Remember to use `self` to access the receiver object of the method
@@ -47,29 +37,40 @@
 
 class Integer
   def hours_in_seconds
-    # replace me
+    self * 3600
   end
 end
 
 class String
   def indent(amount = 2)
-    amount # replace me
+    (' ' * amount) + self
   end
 end
 
 class Integer
   # rubocop:disable MethodLength
+  # rubocop:disable EachWithObject
   def to_roman
-    # replace me
+    num = self
+    letters = { 1000 => 'M', 900 => 'CM', 500 => 'D', 400 => 'CD', 100 => 'C',
+              90 => 'XC', 50 => 'L', 40 => 'XL', 10 => 'X', 9 => 'IX',
+              5 => 'V', 4 => 'IV', 1 => 'I' }
+    letters.keys.reduce('') do |result, key|
+      while num / key > 0 && num > 0
+        result += letters[key]
+        num -= key
+      end
+      result
+    end
   end
 end
 
 class Array
   def second
-    # replace me
+    self[1]
   end
 
   def third
-    # replace me
+    self[2]
   end
 end
