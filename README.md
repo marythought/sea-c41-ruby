@@ -10,8 +10,8 @@ The amount of material we have to cover is ambitious. You will get the most out 
 Key Details | |
 --- | ---
 Course Designation | SEA-C33
-Dates | Feb. 16, 2015 &ndash; Mar. 11, 2015
-Class Times | 7pm - 9pm, Monday &amp; Wednesday
+Dates | June - July 2015
+Class Times | 7pm - 9pm, Tuesday &amp; Thursday
 Class Location | Code Fellows HQ (511 Boren Ave N, Seattle, WA 98109)
 
 
@@ -27,7 +27,7 @@ Class Location | Code Fellows HQ (511 Boren Ave N, Seattle, WA 98109)
 
 ## Prework
 
-All prework assignments and required materials are listed in [The SEA-C33 Canvas Course](https://canvas.instructure.com/courses/917211). Canvas is the Learning Management System (LMS) we'll be using for this course. You are responsible for all assignments, events, and communications posted there.
+All prework assignments and required materials are listed in [The SEA-C41 Canvas Course](https://canvas.instructure.com/courses/940999). Canvas is the Learning Management System (LMS) we'll be using for this course. You are responsible for all assignments, events, and communications posted there.
 
 Prework must be completed before the first class period. Find prework in Canvas, assignments listed under "Class 0". Textbook info is in the Canvas Syllabus.
 
